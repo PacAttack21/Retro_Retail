@@ -56,45 +56,36 @@ header {
   
 .navbar a:hover {
     color: #4CAF50;
-  }
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 960px;
-    margin: 0 auto;
 }
 
-.panel {
-    flex-basis: 20%;
-    padding: 20px;
+.page1 {
+    display:inline-block;
+    width:10%;
+    background-color:antiquewhite;
+    text-align:center;
     margin: 10px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: #f0f0f0;
+    height: 100%;
+    float:left;
 }
-
-.panel-left {
-    width: 25%;
-    order: 1;
+.page2 {
+    display:inline-block;
+    width:50%;
+    background-color:antiquewhite;
+    text-align:center;
+    margin: 10px;
+    height: 100%;
 }
-
-.panel-right {
-    width: 25%;
-    order: 3;
-    float: right;
+.page3 {
+    display:inline-block;
+    width:10%;
+    background-color:antiquewhite;
+    text-align:center;
+    margin: 10px;
+    height: 100%;
+    float:right;
 }
-
 .content {
-    width: 50%;
-    order: 2;
-    flex-basis: 60%;
-    padding: 20px;
-    margin: 10px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: white;
-    float: left;
+    margin:auto;
+    text-align:center;
+    height: 500px;
 }
