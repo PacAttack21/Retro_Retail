@@ -1,38 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Retro-Retail</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <h1 class="header">Retro-Retail</h1>
-        <nav class="navbar">
-            <a href="Home_Page.html">Home</a>
-            <a href="Games.html">Games</a>
-            <a href="Auction.html">Auction</a>
-            <a href="About_Us.html">About Us</a>
-        </nav>
-        <table>
-            <col style="width:15%">
-            <col style="width:70%">
-            <col style="width:15%">
-            <tr>
-              <td rowspan="3" style="background-color: #ccc;" style="border-spacing:10px;" style="width:15%" >Javascript Animation</td>
-              <td style="background-color: #ddd;"><p>To connect enthusiasts to sellers of vintage arcade games and inform the next generation of these cool games</p></td>
-              <td rowspan="3" style="background-color: #ccc;" style="width:15%">Javascript Animation</td>
-            </tr>
-            <tr>
-              <td style="background-color: #ddd;"></td>
-            </tr>
-            <tr class="image">
-              <td style="background-color: #ddd;">
-              <img src="arcade.jfif" alt="Arcade">
-            </td>
-            </tr>
-        </table>          
-    </body>
-    <footer>
-        <p>If you need this page in a more accessible format please contact us at <strong>retrogaming404@ung.edu</strong></p>
-    </footer>
-</html>
+<html>
+<head>
+	<title>Mock Auction Page</title>
+    <link rel="stylesheet" href="Test_CSS.css">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+			font-size: 36px;
+			font-weight: bold;
+		}
+
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-items: flex-start;
+			padding: 20px;
+		}
+
+		.item {
+			background-color: #fff;
+			width: 300px;
+			margin-bottom: 20px;
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+			position: relative;
+		}
+
+		.item img {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+		}
+
+		.item h2 {
+			font-size: 24px;
+			margin: 10px 0;
+			text-align: center;
+		}
+
+		.item p {
+			font-size: 16px;
+			margin: 10px 0;
+			text-align: center;
+			color: #666;
+		}
+
+		.item button {
+			display: block;
+			margin: 20px auto;
+			padding: 10px 20px;
+			font-size: 18px;
+			font-weight: bold;
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		.bids {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			background-color: rgba(255,255,255,0.8);
+			padding: 5px;
+			box-sizing: border-box;
+			font-size: 14px;
+		}
+
+		.bids span {
+			display: block;
+			margin-bottom: 5px;
+		}
+
+		.bids span:last-child {
+			margin-bottom: 0;
+		}
+
+		.bids span em {
+			font-weight: bold;
+			color: #4CAF50;
+		}
+
+		.bids span .name {
+			color: #666;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Retro Retail</h1>
+	</header>
+    <div class="navbar">
+		<a href="#" class="active">Home</a>
+		<a href="#">Games</a>
+		<a href="#"><u>Auction</u></a>
+	</div>
+
+	<div class="container">
+		<div class="item">
+			<img src="https://i0.wp.com/agrlv.com/wp-content/uploads/2019/05/1-6.jpg?fit=3456%2C5184" alt="Item 1">
+			<h2>Galaga Arcade Machine</h2>
+			<p>Defeat the waves of aliens and soar through the stars</p>
+			<button>Bid Now</button>
+		</div>
+
+		<div class="item">
+			<img src="https://numskull.com/wp-content/uploads/Pac-Man-QA-1000x1000-01.jpg" alt="Item 2">
+			<h2>Pac-Man Arcade Machine</h2>
+			<p> Collect the dots an avoid touching the naughty ghosts</p>
+			<button>Bid Now</button>
+		</div>
+
+		<div class="item">
+			<img src="https://fabozzi.net/wp-content/uploads/2020/03/Guitar_Hero_Arcade_Front.png" alt="Item 3">
+			<h2>Guitar Hero Arcade Machine</h2>
+			<p>Shred and Shred some more</p>
+			<button>Bid Now</button>
+		</div>
+
+		<div class="item">
+			<img src="https://i.ebayimg.com/images/g/-hMAAOSwGZxgxZ2Q/s-l1600.jpg" alt="Item 4">
+			<h2>Dig Dug Arcade Machine</h2>
+			<p>Tunnel through the map and Pop</p>
+			<button>Bid Now</button>
+		</div>
+
+		<div class="item">
+			<img src="https://thumbs.dreamstime.com/z/speed-rider-arcade-game-motorcycle-racing-simulator-machine-bangkok-thailand-%C3%A2%E2%82%AC-august-%C3%A2%E2%82%AC%C5%BE-126109197.jpg" alt="Item 5">
+			<h2>Motorcycle Arcade Machine</h2>
+            <p>Ride like never before</p>
+			<button>Bid Now</button>
+        </div>
+    </div>
+</body>
