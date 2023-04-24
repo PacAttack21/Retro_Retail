@@ -2,28 +2,68 @@
 <html>
 <head>
 	<title>Retro Retail</title>
-    <link rel="stylesheet" href="Test_CSS.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<header>
 		<h1>Retro Retail</h1>
+    <div id="user"></div>
 	</header>
-    <div class="navbar">
-		<a href="#" class="active"><u>Home</u></a>
-		<a href="#">Games</a>
-		<a href="#">Auction</a>
+  <div class="navbar">
+		<a href="index.html"><u>Home</u></a>
+		<a href="Games.html">Games</a>
+		<a href="Auction.html">Auction</a>
 	</div>
     <main>
         <div class="content">
             <div class="page1" > 
-                <p>Hello</p>
+              <canvas id="canvas" width="200" height="500"></canvas>
             </div>
             <div class="page2">
-                <p>Wow</p>
+                <p>Our goal is to connect retro game enthusiasts from all around the world to learn a little
+                  more about the history of games, play a few simplified retro games, and even have the chance to
+                  one of these beutiful machines from the past for themselves.
+                </p>
+                <form id="loginForm">
+                  <label for="username">Username:</label>
+                  <input type="text" id="username" name="username">
+                  <br><br>
+                  <input type="submit" value="Submit">
+                </form>
             </div>
             <div class="page3">
-                <p>Dang</p>
+              <canvas id="canvas2" width="200" height="500"></canvas>
             </div>
         </div>
     </main>
+    <script src="sides.js"></script>
+    <script>
+      // get user div element
+      const userDiv = document.getElementById('user');
+
+      // get login form
+      const loginForm = document.getElementById('loginForm');
+
+      // add submit event listener to login form
+      loginForm.addEventListener('submit', function(event) {
+        // prevent form submission
+        event.preventDefault();
+        
+        // get username input value
+        const username = document.getElementById('username').value;
+
+        // store username in session storage
+        sessionStorage.setItem('username', username);
+
+        // display username in user div element
+        userDiv.innerHTML = `Welcome, ${username}!`;
+      });
+
+      // check if username is stored in session storage
+      if(sessionStorage.getItem('username')) {
+        // display username in user div element
+        const username = sessionStorage.getItem('username');
+        userDiv.innerHTML = `Welcome, ${username}!`;
+      }
+    </script>
 </body>
