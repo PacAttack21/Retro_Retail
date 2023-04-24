@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Mock Auction Page</title>
-    <link rel="stylesheet" href="Test_CSS.css">
+    <link rel="stylesheet" href="style.css">
 	<style>
 		body {
 			margin: 0;
@@ -103,6 +103,7 @@
 <body>
 	<header>
 		<h1>Retro Retail</h1>
+		<div id="user"></div>
 	</header>
     <div class="navbar">
 		<a href="index.html" class="active">Home</a>
@@ -146,4 +147,14 @@
 			<button>Bid Now</button>
         </div>
     </div>
+	<script>
+        const userDiv = document.getElementById('user');
+
+        if(sessionStorage.getItem('username')) {
+        // display username in user div element
+        const username = sessionStorage.getItem('username');
+        userDiv.innerHTML = `Welcome, ${username}!`;
+      }
+    </script>
 </body>
+</html>
