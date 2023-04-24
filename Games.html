@@ -2,8 +2,8 @@
 <html>
 <head>
 	<title>Retro Retail</title>
-    <link rel="stylesheet" href="Test_CSS.css">
-    <scipt src="Pac-Dude.js"></scipt>
+    <link rel="stylesheet" href="style.css">
+	<script src="sides.js"></script>
 </head>
 <style>
     .pacman {
@@ -24,6 +24,7 @@
 <body>
 	<header>
 		<h1>Retro Retail</h1>
+        <div id="user"></div>
 	</header>
     <div class="navbar">
 		<a href="index.html" class="active">Home</a>
@@ -33,19 +34,39 @@
     <main>
         <div class="content">
             <div class="page1" > 
-                <p>Hello</p>
+                <canvas id="canvas" width="200" height="500"></canvas>
             </div>
             <div class="page2">
                 <div class="pacman">
                     <h2>Pac-Man</h2>
+                    <a href="https://codehs.com/sandbox/pacman2114/pacdude/run" target="_blank">
+                        <img src="https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/08/pacman.jpg" width="20%" alt="Button">
+                    </a>
+                    <!--I did however make this game in javascript-->
                 </div>
                 <div class="galaga">
                     <h2>Galaga</h2>
+                    <a href="Galaga.html" target="_blank">
+                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/403430/ss_840d4046749a70d0373c085d100e967ecea2753d.1920x1080.jpg?t=1580375648" width="20%" alt="Button">
+                    </a>
+                    <!--I used someone elses code for galaga because I didnt have time to make it. Credit
+                    goes to https://codepen.io/adelciotto/pen/WNzRYy-->
                 </div>
             </div>
             <div class="page3">
-                <p>Dang</p>
+                <canvas id="canvas2" width="200" height="500"></canvas>
             </div>
         </div>
     </main>
+    <script src="sides.js"></script>
+    <!--Not Sure why the sides.js works on first webpage but not here-->
+    <script>
+        const userDiv = document.getElementById('user');
+
+        if(sessionStorage.getItem('username')) {
+        // display username in user div element
+        const username = sessionStorage.getItem('username');
+        userDiv.innerHTML = `Welcome, ${username}!`;
+      }
+    </script>
 </body>
