@@ -61,7 +61,7 @@ header {
 .page1 {
     display:inline-block;
     width:10%;
-    background-color:antiquewhite;
+    background-color:black;
     text-align:center;
     margin: 10px;
     height: 100%;
@@ -69,16 +69,28 @@ header {
 }
 .page2 {
     display:inline-block;
+    color: cyan;
     width:50%;
-    background-color:antiquewhite;
+    background-color:black;
     text-align:center;
     margin: 10px;
     height: 100%;
+    box-shadow: 0 0 20px #ff4da6, 0 0 40px #ff4da6;
 }
+
+.page2 p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-top: 20px;
+    padding: 10px;
+    color: white;
+    text-shadow: 0 0 10px #ff4da6, 0 0 20px #ff4da6;
+  }
+
 .page3 {
     display:inline-block;
     width:10%;
-    background-color:antiquewhite;
+    background-color:black;
     text-align:center;
     margin: 10px;
     height: 100%;
